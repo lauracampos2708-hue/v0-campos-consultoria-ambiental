@@ -126,4 +126,17 @@ export function Footer() {
           <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
             CNPJ: 55.895.475/0001-85
           </span>
-          <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text
+          <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
+            CREA nº 468259MG
+          </span>
+          <a 
+            href="mailto:contato@camposconsultoriaambiental.com.br"
+            className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint no-underline transition-colors hover:bg-mint/25"
+          >
+            contato@camposconsultoriaambiental.com.br
+          </a>
+        </div>
+      </div>
+    </footer>
+  )
+}
