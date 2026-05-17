@@ -121,10 +121,8 @@ export function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-2.5 pt-5 border-t border-white/[0.08] text-[11.5px]">
         <div>
           © 2026 Campos Consultoria Ambiental &amp; Sustentabilidade. Todos os direitos reservados.
-        </div>
-        <div className="flex items-center gap-2">
-          {/* CNPJ ADICIONADO AQUI */}
-          <span className="text-white/35 border border-white/[0.1] rounded-md px-2.5 py-1 text-[11px] font-medium">
+       <div className="flex items-center gap-2">
+          <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
             CNPJ: 55.895.475/0001-85
           </span>
           <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
