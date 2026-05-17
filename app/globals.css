@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Campos Consultoria Colors */
+  --pine: #0d3320;
+  --forest: #1a5c38;
+  --leaf: #2d8653;
+  --sage: #4aaa72;
+  --mint: #7ecda0;
+  --foam: #c2e8d2;
+  --mist: #e8f6ee;
+  --snow: #f4fbf7;
+  --ink: #0f1f14;
+  --charcoal: #2d3d34;
+  --slate: #5a7060;
+  --muted-color: #8ba591;
+  --line: rgba(13,51,32,.1);
+  --line2: rgba(13,51,32,.18);
+  --gold: #c8973a;
+  --whatsapp: #25d366;
+  
+  /* Design Tokens */
+  --background: #f4fbf7;
+  --foreground: #0f1f14;
+  --card: #ffffff;
+  --card-foreground: #0f1f14;
+  --popover: #ffffff;
+  --popover-foreground: #0f1f14;
+  --primary: #1a5c38;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f6ee;
+  --secondary-foreground: #0f1f14;
+  --muted: #e8f6ee;
+  --muted-foreground: #5a7060;
+  --accent: #c2e8d2;
+  --accent-foreground: #0d3320;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(13,51,32,.1);
+  --input: rgba(13,51,32,.18);
+  --ring: #4aaa72;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Custom Colors */
+  --color-pine: var(--pine);
+  --color-forest: var(--forest);
+  --color-leaf: var(--leaf);
+  --color-sage: var(--sage);
+  --color-mint: var(--mint);
+  --color-foam: var(--foam);
+  --color-mist: var(--mist);
+  --color-snow: var(--snow);
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-slate: var(--slate);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-whatsapp: var(--whatsapp);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-snow text-ink;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--mist);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+@keyframes fwaf {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-blink {
+  animation: blink 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: fwaf 3s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.72s ease, transform 0.72s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
