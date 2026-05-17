@@ -17,7 +17,7 @@ const companyLinks = [
   { href: "#esg", label: "ESG" },
   { href: "#contato", label: "Contato" },
   { href: "https://wa.me/5534991893211", label: "WhatsApp", external: true },
-  { href: "https://www.instagram.com/camposconsultoriambiental", label: "Instagram", external: true },
+  { href: "https://www.instagram.com/camposconsultoriaambiental", label: "Instagram", external: true },
 ]
 
 export function Footer() {
@@ -43,7 +43,7 @@ export function Footer() {
           </p>
           <div className="flex gap-2">
             <a
-              href="https://www.instagram.com/camposconsultoriambiental"
+              href="https://www.instagram.com/camposconsultoriaambiental"
               target="_blank"
               rel="noopener noreferrer"
               className="w-[34px] h-[34px] rounded-lg bg-white/[0.07] border border-white/[0.12] flex items-center justify-center transition-all hover:bg-white/[0.16] hover:-translate-y-0.5"
@@ -120,9 +120,13 @@ export function Footer() {
       {/* Bottom */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-2.5 pt-5 border-t border-white/[0.08] text-[11.5px]">
         <div>
-          © 2025 Campos Consultoria Ambiental &amp; Sustentabilidade. Todos os direitos reservados.
+          © 2026 Campos Consultoria Ambiental &amp; Sustentabilidade. Todos os direitos reservados.
         </div>
         <div className="flex items-center gap-2">
+          {/* CNPJ ADICIONADO AQUI */}
+          <span className="text-white/35 border border-white/[0.1] rounded-md px-2.5 py-1 text-[11px] font-medium">
+            CNPJ: 55.895.475/0001-85
+          </span>
           <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
             CREA nº 468259MG
           </span>
