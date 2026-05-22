@@ -41,6 +41,24 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Google Ads Tag */}
+<Script
+  id="google-ads"
+  strategy="afterInteractive"
+  src="https://www.googletagmanager.com/gtag/js?id=AW-18149492284"
+/>
+<Script
+  id="google-ads-config"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18149492284');
+    `,
+  }}
+/>
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {/* Google Tag Manager - NoScript */}
