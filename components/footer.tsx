@@ -124,7 +124,7 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
-            CNPJ: 55.895.475/0001-85
+            CNPJ: 66.518.484/0001-73
           </span>
           <span className="bg-mint/15 border border-mint/30 rounded-md px-2.5 py-1 text-[11px] font-medium text-mint">
             CREA nº 468259MG
