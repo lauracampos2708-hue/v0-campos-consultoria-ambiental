@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 const tabs = [
@@ -21,7 +20,7 @@ const services = [
   { icon: "🌿", name: "Consultoria Ambiental", desc: "Assessoria estratégica de gestão ambiental para o seu negócio.", category: "lic" },
   { icon: "🏗️", name: "Plano de Gestão Ambiental", desc: "Elaboração e implementação de planos para empreendimentos.", category: "lic" },
   // Resíduos
-  { icon: "{ icon: "♻️", name: "PGRS", desc: "Plano de Gerenciamento de Resíduos Sólidos.", category: "res", link: "/pgrs-uberlandia.html" },
+  { icon: "♻️", name: "PGRS", desc: "Plano de Gerenciamento de Resíduos Sólidos.", category: "res", link: "/pgrs-uberlandia.html" },
   { icon: "🏚️", name: "PGRCC", desc: "Resíduos da Construção Civil para obras e reformas.", category: "res" },
   { icon: "🏥", name: "PGRSS", desc: "Plano de Gerenciamento de Resíduos de Serviços de Saúde.", category: "res" },
   // Rural
@@ -117,7 +116,6 @@ export function Services() {
             <a
               key={index}
               href={customLink || "#contato"}
-              href="#contato"
               className={`group no-underline cursor-pointer flex flex-col gap-2 relative overflow-hidden rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${
                 isFeatured
                   ? "sm:col-span-2 bg-gradient-to-br from-forest to-pine border border-forest text-white hover:shadow-xl"
