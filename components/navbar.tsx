@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#sobre", label: "Sobre" },
   { href: "#processo", label: "Processo" },
   { href: "#esg", label: "ESG" },
+  { href: "#experiencia", label: "Por que a Campos" },
   { href: "#contato", label: "Contato" },
 ]
 
