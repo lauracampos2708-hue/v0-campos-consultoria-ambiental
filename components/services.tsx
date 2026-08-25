@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 const tabs = [
@@ -21,7 +20,7 @@ const services = [
   { icon: "🌿", name: "Consultoria Ambiental", desc: "Assessoria estratégica de gestão ambiental para o seu negócio.", category: "lic" },
   { icon: "🏗️", name: "Plano de Gestão Ambiental", desc: "Elaboração e implementação de planos para empreendimentos.", category: "lic" },
   // Resíduos
-  { icon: "♻️", name: "PGRS", desc: "Plano de Gerenciamento de Resíduos Sólidos.", category: "res" },
+  { icon: "♻️", name: "PGRS", desc: "Plano de Gerenciamento de Resíduos Sólidos.", category: "res", link: "/pgrs-uberlandia.html" },
   { icon: "🏚️", name: "PGRCC", desc: "Resíduos da Construção Civil para obras e reformas.", category: "res" },
   { icon: "🏥", name: "PGRSS", desc: "Plano de Gerenciamento de Resíduos de Serviços de Saúde.", category: "res" },
   // Rural
@@ -112,10 +111,11 @@ export function Services() {
       <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         {filteredServices.map((service, index) => {
           const isFeatured = (service as { featured?: boolean }).featured
+          const customLink = (service as { link?: string }).link
           return (
-            <Link
+            <a
               key={index}
-              href="#contato"
+              href={customLink || "#contato"}
               className={`group no-underline cursor-pointer flex flex-col gap-2 relative overflow-hidden rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${
                 isFeatured
                   ? "sm:col-span-2 bg-gradient-to-br from-forest to-pine border border-forest text-white hover:shadow-xl"
@@ -162,7 +162,7 @@ export function Services() {
                   isFeatured ? "text-mint" : "text-sage"
                 }`}
               />
-            </Link>
+            </a>
           )
         })}
       </div>

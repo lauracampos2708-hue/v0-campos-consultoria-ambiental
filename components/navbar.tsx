@@ -10,6 +10,8 @@ const navLinks = [
   { href: "#sobre", label: "Sobre" },
   { href: "#processo", label: "Processo" },
   { href: "#esg", label: "ESG" },
+  { href: "#experiencia", label: "Por que a Campos" },
+  { href: "/pgrs-uberlandia.html", label: "PGRS Uberlândia" },
   { href: "#contato", label: "Contato" },
 ]
 
