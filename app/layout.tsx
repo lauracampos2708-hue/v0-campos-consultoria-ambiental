@@ -27,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-snow">
       <head>
-        {/* Google Tag Manager - Script Principal */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -41,9 +40,25 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18149492284"
+        />
+        <Script
+          id="google-ads-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18149492284');
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        {/* Google Tag Manager - NoScript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TJ968WR8"
@@ -52,9 +67,9 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+ 
       </body>
     </html>
   )

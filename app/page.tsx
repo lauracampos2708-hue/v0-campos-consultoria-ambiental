@@ -5,6 +5,7 @@ import { Services } from "@/components/services"
 import { About } from "@/components/about"
 import { Process } from "@/components/process"
 import { ESG } from "@/components/esg"
+import { Experience } from "@/components/experience"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { WhatsAppFAB } from "@/components/whatsapp-fab"
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Process />
       <ESG />
+       <Experience />
       <Contact />
       <Footer />
       <WhatsAppFAB />
