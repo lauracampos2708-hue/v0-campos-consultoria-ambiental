@@ -43,11 +43,12 @@ const services = [
   { icon: "📚", name: "Programa de Educação Ambiental (PEA)", desc: "Capacitação ambiental para equipes e comunidades.", category: "esg" },
   // Estudos
   { icon: "📄", name: "Laudos Ambientais e Defesas", desc: "Laudos técnicos e defesas de autuações ambientais.", category: "est" },
-  { icon: "🔬", name: "Estudo de Alternativa Técnica", desc: "Análise comparativa de alternativas para empreendimentos.", category: "est" },
+  { icon: "📑", name: "Estudo de Alternativa Técnica", desc: "Análise comparativa de alternativas para empreendimentos.", category: "est" },
   { icon: "📊", name: "RAPP", desc: "Relatório Ambiental de Atividade e Processo.", category: "est" },
   { icon: "🌳", name: "PRAD", desc: "Plano de Recuperação de Áreas Degradadas.", category: "est" },
   { icon: "📝", name: "Relatório de Condicionantes Ambientais", desc: "Monitoramento das condicionantes das licenças.", category: "est" },
    { icon: "👥", name: "Diagnóstico Socioambiental Participativo (DSAP)", desc: "Diagnóstico socioambiental com participação das comunidades afetadas.", category: "est" },
+    { icon: "🧪", name: "Gerenciamento de Áreas Contaminadas (GAC)", desc: "Avaliação preliminar, investigação confirmatória e detalhada, avaliação de risco e plano de intervenção em áreas com suspeita de contaminação.", category: "est" },
 ]
 
 export function Services() {
