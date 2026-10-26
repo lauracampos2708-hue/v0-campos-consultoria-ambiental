@@ -1,7 +1,8 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { MessageCircle, MapPin, Phone, Instagram } from "lucide-react"
+import Link from "next/link"
+import { MessageCircle, MapPin, Phone, Instagram, Mail } from "lucide-react"
 
 const serviceOptions = [
   "Licenciamento Ambiental",
@@ -94,6 +95,22 @@ Olá! Vim pelo site e gostaria de solicitar uma proposta.
               <div className="text-[10px] font-semibold tracking-wider uppercase text-slate mb-0.5">WhatsApp &amp; Telefone</div>
               <div className="text-[14.5px] font-medium text-ink">(34) 99189-3211</div>
               <div className="text-[12.5px] text-slate mt-0.5">Atendimento em horário comercial</div>
+            </div>
+          </div>
+
+          <div className="flex gap-3.5 items-start">
+            <div className="w-[42px] h-[42px] rounded-xl bg-mist border border-foam flex items-center justify-center flex-shrink-0">
+              <Mail className="w-4 h-4 text-forest" />
+            </div>
+            <div className="min-w-0">
+              <div className="text-[10px] font-semibold tracking-wider uppercase text-slate mb-0.5">E-mail</div>
+              <a
+                href="mailto:contato@camposconsultoriaambiental.com.br"
+                className="text-[14.5px] font-medium text-ink break-all no-underline transition-colors hover:text-forest"
+              >
+                contato@camposconsultoriaambiental.com.br
+              </a>
+              <div className="text-[12.5px] text-slate mt-0.5">Envie documentos e solicitações formais</div>
             </div>
           </div>
 
@@ -224,6 +241,17 @@ Olá! Vim pelo site e gostaria de solicitar uma proposta.
                 ? "✓ WhatsApp aberto com seus dados!"
                 : "Enviar solicitação →"}
             </button>
+
+            <p className="text-[11.5px] text-slate text-center mt-3 leading-relaxed">
+              Ao enviar, você concorda com o uso dos seus dados para contato, conforme nossa{" "}
+              <Link
+                href="/politica-de-privacidade"
+                className="text-forest underline underline-offset-2 hover:text-pine"
+              >
+                Política de Privacidade
+              </Link>
+              .
+            </p>
           </form>
         </div>
       </div>
